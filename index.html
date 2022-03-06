@@ -10,45 +10,47 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
-
 </head>
-<body>
+<body>    
     <header>
-        <nav class="navbar_menu container">
+        <nav class="navbar_menu">
             <div class="logo">
                 <img src="images/logo_6.gif" alt="">
             </div>
-            <div class="nav_elements">
+            <ul class="nav_elements">
                 <li><a href="Planet">Planet</a></li>
                 <li><a href="Asteroid">Asteroid</a></li>
                 <li><a href="Sun">Sun</a></li>
                 <li><a href="Moon">Moon</a></li>
-            </div>
+            </ul>
         </nav>
     </header>
 
     <main>
-        <div class="earthpic container" id="scene">
-            <img class="earth" src="images/earth_2.png" alt="">
-            <img class="satelite" src="images/sat_1.png" alt="">
-            <img class="jupiter" src="images/jupiter_2.png" alt="">
-            <img class="sun" src="images/sun_1.png" alt="">
-            <img class="moon" src="images/moon_1.png" alt="">
-        </div>
-        <div class="banner container">
-            <div>
-                <img src="images/" alt="">
-            </div>
-    
-        </div>
+        <section class="earthpic container">
+            <img class="earthimg" id="earth" src="images/earth_2.png" alt="">
+            <img class="satimg" id="satellite" src="images/sat_1.png" alt="">
+            <img class="jupimg" id="jupiter" src="images/jupiter_2.png" alt="">
+            <img class="sunimg" id="sun" src="images/sun_1.png" alt="">
+            <img class="moonimg" id="moon" src="images/moon_1.png" alt="">
+        </section>
+        
+        <section class="banner container">
+            <img class="earthbanner" src="images/earth_2.png" alt="">
+            <img class="spaceshipbanner" src="images/spaceship_1.png" alt="">
+            <video class="bannervideo" src="videos/banner.mp4" autoplay muted loop preload="auto"></video>
+            <img class="moonbanner" src="images/moon_1.png" alt="">
+
+        </section>
+
+        <section class="moonpic container">
+            <img class="moonimg2" src="images/moon_1.png" alt="">
+        </section>
+
+
+
 
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js" integrity="sha512-f5HTYZYTDZelxS7LEQYv8ppMHTZ6JJWglzeQmr0CVTS70vJgaJiIO15ALqI7bhsracojbXkezUIL+35UXwwGrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        var parallax = new Parallax('.parallax');
-      </script>
+    <script src="js/parallax.js"></script>
 </body>
-
-
-
 </html>
