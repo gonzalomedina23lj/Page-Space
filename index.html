@@ -19,38 +19,56 @@
             </div>
             <ul class="nav_elements">
                 <li><a href="Planet">Planet</a></li>
-                <li><a href="Asteroid">Asteroid</a></li>
-                <li><a href="Sun">Sun</a></li>
                 <li><a href="Moon">Moon</a></li>
+                <li><a href="Sun">Sun</a></li>
+                <li><a href="Mars">Mars</a></li>                
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="earthpic container">
-            <img class="earthimg" id="earth" src="images/earth_2.png" alt="">
-            <img class="satimg" id="satellite" src="images/sat_1.png" alt="">
-            <img class="jupimg" id="jupiter" src="images/jupiter_2.png" alt="">
-            <img class="sunimg" id="sun" src="images/sun_1.png" alt="">
-            <img class="moonimg" id="moon" src="images/moon_1.png" alt="">
+        <section class="container">
+            <div class="earthsection">
+                <img class="earthimg" id="earth" src="images/earth_2.png" alt="">
+                <img class="satimg" id="satellite" src="images/sat_1.png" alt="">
+                <img class="jupimg" id="jupiter" src="images/jupiter_2.png" alt="">
+                <img class="sunimg" id="sun" src="images/sun_1.png" alt="">
+                <img class="moonimg" id="moon" src="images/moon_1.png" alt="">
+
+            </div>
+
         </section>
         
         <section class="banner container">
-            <img class="earthbanner" src="images/earth_2.png" alt="">
-            <img class="spaceshipbanner" src="images/spaceship_1.png" alt="">
             <video class="bannervideo" src="videos/banner.mp4" autoplay muted loop preload="auto"></video>
+            <img class="earthbanner" src="images/earth_2.png" alt="">
+            <img class="spaceshipbanner" id="spaceship" src="images/spaceship_1.png" alt="">
             <img class="moonbanner" src="images/moon_1.png" alt="">
 
         </section>
 
-        <section class="moonpic container">
-            <img class="moonimg2" src="images/moon_1.png" alt="">
+        <section class="moonsection container">
+            <div id="scene">
+                <div data-depth=".1"><img class="moonpic" src="images/moon_1.png" alt=""></div>
+                <div class="layer" data-depth="0.1"><img class=earthmoonsection src="images/earth_2.png" alt=""></div>
+                <div class="layer" data-depth="0.4"><img class="star1" src="images/star_1.png" alt=""></div>
+                <div class="layer" data-depth="0.8"><img class="star2" src="images/star_1.png" alt=""></div>
+                <div class="layer" data-depth="0.2"><img class="star3" src="images/star_1.png" alt=""></div>
+                <div class="layer" data-depth="0.8"><img class="astronaut" src="images/astronaut_1.png" alt=""></div>
+            </div>
+
+                
         </section>
 
 
 
 
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="js/parallax.js"></script>
+    <script>
+        var scene = document.getElementById('scene');
+        var parallaxInstance = new Parallax(scene);
+    </script>
 </body>
 </html>
